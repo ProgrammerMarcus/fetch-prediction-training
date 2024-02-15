@@ -1,7 +1,55 @@
 body {
     background-color: #eee;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
+.info {
+    display: flex;
+    place-items: center;
+    gap: 20px;
+    .box {
+        display: grid;
+        gap: 10px;
+        font-size: 1.3rem;
+    }
+}
+
+@keyframes slide {
+    from {
+        left: -222px;
+    }
+    to {
+        left: 0;
+    }
+}
+
+.slide {
+    position: relative;
+    animation-name: slide;
+    animation-duration: 1s;
+    animation-direction: forwards;
+}
+
+@keyframes draw {
+    from {
+        left: -222px;
+        transform: rotateY(-90deg);
+    }
+    to {
+        left: 0;
+        transform: rotateY(0deg);
+    }
+}
+
+.unknown {
+    position: relative;
+    animation-name: draw;
+    animation-duration: 1s;
+    animation-direction: forwards;
+}
+
+.deck, .unknown {
+    height: 196px;
 }
 
 .cards {
@@ -12,5 +60,10 @@ body {
     .card {
         height: 96px;
         width: min-content;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    .card:hover {
+        transform: scale(1.2);
     }
 }
