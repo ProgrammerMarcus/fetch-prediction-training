@@ -20,7 +20,9 @@ async function check(value, suit) {
     document.querySelector(".box").classList.add("slide")
     if (data.remaining === 0) {
         deck_id = "new"
+        document.querySelector(".deck").style.visibility = "hidden"
     } else {
+        document.querySelector(".deck").style.visibility = "visible"
         deck_id = data.deck_id
     }
 }

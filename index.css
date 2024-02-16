@@ -1,6 +1,7 @@
 body {
-    background-color: #eee;
+    background-color: darkgreen;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
 }
 
 .info {
