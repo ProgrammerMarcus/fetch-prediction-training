@@ -16,7 +16,7 @@ async function check(value, suit) {
     if (value === data.cards[0].value && suit === data.cards[0].suit) {
         successes++;
     }
-    document.querySelector(".score").innerText = successes + "/" + attempts;
+    document.querySelector(".score").innerText = successes + "/" + attempts + " cards guessed correctly";
     document.querySelector(".box").classList.add("slide")
     if (data.remaining === 0) {
         deck_id = "new"
